@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const [data, setData] = useState({});
-  const [city, setCity] = useState('cebu');
+  const [city, setCity] = useState('manila');
   const [error, setError] = useState(false);
 
   const handleChange = (e) => {
