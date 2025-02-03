@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const [data, setData] = useState({});
-  const [city, setCity] = useState('manila');
+  const [city, setCity] = useState('Manila');
   const [error, setError] = useState(false);
 
   const handleChange = (e) => {
@@ -12,7 +12,7 @@ function App() {
     e.preventDefault();
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=c9584abf0bac496fb7d121930240403&q=${city}&aqi=no`);
+        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=c9584abf0bac496fb7d121930240403&q=${city}&aqi=no`);
         const resultData = await response.json();
 
         if (!response.ok) {
@@ -35,7 +35,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=c9584abf0bac496fb7d121930240403&q=${city}&aqi=no`);
+        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=c9584abf0bac496fb7d121930240403&q=${city}&aqi=no`);
         const resultData = await response.json();
 
         setError(false);
